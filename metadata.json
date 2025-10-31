@@ -1,0 +1,5 @@
+{
+  "name": "Lazada Clone",
+  "description": "A modern e-commerce web application inspired by Lazada, built with React and Tailwind CSS. It features product listings, search, filtering by category, a shopping cart, and product detail views.",
+  "requestFramePermissions": []
+}
