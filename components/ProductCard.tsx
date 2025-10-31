@@ -1,4 +1,3 @@
-
 import React from 'react';
 import type { Product } from '../types';
 import { StarIcon, HeartIcon } from './icons';
@@ -40,8 +39,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart, 
           onClick={handleWishlistClick}
           className={`absolute top-2 right-2 p-1.5 rounded-full transition-colors duration-200 ${
             isWishlisted 
-              ? 'bg-red-100 text-red-500' 
-              : 'bg-white/70 text-gray-600 hover:text-red-500 hover:bg-white'
+              ? 'bg-pink-100 text-pink-500' 
+              : 'bg-white/70 text-gray-600 hover:text-pink-500 hover:bg-white'
           }`}
           aria-label={isWishlisted ? "Remove from wishlist" : "Add to wishlist"}
         >
@@ -59,10 +58,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart, 
             {renderStars(product.rating)}
             <span className="text-xs text-gray-500 ml-2">({product.reviewCount})</span>
         </div>
-        <p className="text-lg font-bold text-orange-500 mb-3">${product.price.toFixed(2)}</p>
+        <p className="text-lg font-bold text-purple-600 mb-3">${product.price.toFixed(2)}</p>
         <button
           onClick={() => onAddToCart(product)}
-          className="w-full mt-auto bg-orange-500 text-white py-2 px-4 rounded-md font-semibold hover:bg-orange-600 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-75"
+          className="w-full mt-auto bg-pink-500 text-white py-2 px-4 rounded-md font-semibold hover:bg-pink-600 transition-colors focus:outline-none focus:ring-2 focus:ring-pink-400 focus:ring-opacity-75"
         >
           Add to Cart
         </button>

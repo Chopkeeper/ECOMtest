@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import type { Product, Review } from '../types';
 import { CloseIcon, StarIcon, HeartIcon } from './icons';
@@ -52,7 +51,7 @@ const ReviewForm: React.FC<{ productId: number; onAddReview: ProductModalProps['
                     type="text"
                     value={author}
                     onChange={(e) => setAuthor(e.target.value)}
-                    className="w-full p-2 border rounded-md focus:ring-orange-400 focus:border-orange-400"
+                    className="w-full p-2 border rounded-md focus:ring-pink-400 focus:border-pink-400"
                     placeholder="e.g., John Doe"
                 />
             </div>
@@ -87,11 +86,11 @@ const ReviewForm: React.FC<{ productId: number; onAddReview: ProductModalProps['
                     value={comment}
                     onChange={(e) => setComment(e.target.value)}
                     rows={3}
-                    className="w-full p-2 border rounded-md focus:ring-orange-400 focus:border-orange-400"
+                    className="w-full p-2 border rounded-md focus:ring-pink-400 focus:border-pink-400"
                     placeholder="Share your thoughts about the product..."
                 />
             </div>
-            <button type="submit" className="w-full bg-orange-500 text-white py-2 px-4 rounded-md font-semibold hover:bg-orange-600 transition-colors">
+            <button type="submit" className="w-full bg-pink-500 text-white py-2 px-4 rounded-md font-semibold hover:bg-pink-600 transition-colors">
                 Submit Review
             </button>
         </form>
@@ -165,7 +164,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, reviews, on
           </div>
           
           <div className="mt-auto pt-6">
-            <p className="text-4xl font-extrabold text-orange-500 mb-6">${product.price.toFixed(2)}</p>
+            <p className="text-4xl font-extrabold text-purple-600 mb-6">${product.price.toFixed(2)}</p>
             
             <div className="flex items-center gap-4 mb-6">
               <label htmlFor="quantity" className="font-semibold">Quantity:</label>
@@ -185,7 +184,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, reviews, on
             <div className="flex items-stretch gap-3">
                 <button
                     onClick={handleAddToCartClick}
-                    className="flex-grow bg-orange-500 text-white py-3 px-6 rounded-lg font-bold text-lg hover:bg-orange-600 transition-transform transform hover:scale-105"
+                    className="flex-grow bg-pink-500 text-white py-3 px-6 rounded-lg font-bold text-lg hover:bg-pink-600 transition-transform transform hover:scale-105"
                 >
                     Add to Cart
                 </button>
@@ -193,8 +192,8 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, reviews, on
                     onClick={() => onToggleWishlist(product.id)}
                     className={`p-3 rounded-lg border-2 flex items-center justify-center transition-all transform hover:scale-105 ${
                     isWishlisted
-                        ? 'border-red-500 bg-red-100 text-red-500'
-                        : 'border-gray-300 text-gray-600 hover:border-red-400 hover:text-red-500'
+                        ? 'border-pink-500 bg-pink-100 text-pink-500'
+                        : 'border-gray-300 text-gray-600 hover:border-pink-400 hover:text-pink-500'
                     }`}
                     aria-label={isWishlisted ? "Remove from wishlist" : "Add to wishlist"}
                 >

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import type { CartItem } from '../types';
 import { CloseIcon, TrashIcon } from './icons';
@@ -17,7 +16,7 @@ const CartItemRow: React.FC<{item: CartItem; onUpdateQuantity: CartProps['onUpda
             <img src={item.imageUrl} alt={item.name} className="w-20 h-20 object-cover rounded-md" />
             <div className="flex-grow">
                 <h4 className="font-semibold text-gray-800">{item.name}</h4>
-                <p className="text-orange-500 font-bold">${item.price.toFixed(2)}</p>
+                <p className="text-purple-600 font-bold">${item.price.toFixed(2)}</p>
                 <div className="flex items-center mt-2 border rounded-md w-fit">
                     <button onClick={() => onUpdateQuantity(item.id, item.quantity - 1)} className="px-2 py-0.5 text-lg font-bold">-</button>
                     <input 
@@ -86,7 +85,7 @@ export const Cart: React.FC<CartProps> = ({ isOpen, onClose, cartItems, onUpdate
                 <span className="font-semibold text-gray-700">Subtotal:</span>
                 <span className="font-bold text-gray-800">${subtotal.toFixed(2)}</span>
               </div>
-              <button className="w-full bg-orange-500 text-white py-3 rounded-lg font-bold text-lg hover:bg-orange-600 transition-colors">
+              <button className="w-full bg-pink-500 text-white py-3 rounded-lg font-bold text-lg hover:bg-pink-600 transition-colors">
                 Checkout
               </button>
             </div>

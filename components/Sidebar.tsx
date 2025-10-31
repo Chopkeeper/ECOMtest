@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface SidebarProps {
@@ -18,7 +17,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ categories, selectedCategory, 
               onClick={() => onSelectCategory(category)}
               className={`w-full text-left px-3 py-2 rounded-md transition-colors text-gray-700 ${
                 selectedCategory === category
-                  ? 'bg-orange-100 text-orange-600 font-semibold'
+                  ? 'bg-pink-100 text-pink-600 font-semibold'
                   : 'hover:bg-slate-100'
               }`}
             >

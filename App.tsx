@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useMemo } from 'react';
 import { Header } from './components/Header';
 import { Sidebar } from './components/Sidebar';
@@ -97,7 +96,7 @@ export default function App() {
   }, [cartItems]);
 
   return (
-    <div className="min-h-screen font-sans bg-slate-100">
+    <div className="min-h-screen font-sans">
       <Header
         searchTerm={searchTerm}
         onSearchChange={(e) => setSearchTerm(e.target.value)}
